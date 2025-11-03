@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dewk27l8nksug"]
+
+[ext_resource type="PackedScene" uid="uid://bcj8rsvpt00k3" path="res://nodes/paper.tscn" id="1_2xkxk"]
+[ext_resource type="PackedScene" uid="uid://tygf1m6o1tcj" path="res://nodes/money.tscn" id="2_60xiw"]
+[ext_resource type="PackedScene" uid="uid://scgg812khxsf" path="res://nodes/krathong.tscn" id="3_telj2"]
+[ext_resource type="PackedScene" uid="uid://dloy3uiytguwy" path="res://nodes/game_spawner.tscn" id="4_q2dpj"]
+
+[node name="main_scene" type="Node2D"]
+
+[node name="money" parent="." instance=ExtResource("2_60xiw")]
+visible = false
+offset_left = 256.0
+offset_top = 256.0
+offset_right = 256.0
+offset_bottom = 256.0
+
+[node name="paper" parent="." instance=ExtResource("1_2xkxk")]
+visible = false
+offset_left = 256.0
+offset_top = 256.0
+offset_right = 256.0
+offset_bottom = 256.0
+
+[node name="krathong" parent="." instance=ExtResource("3_telj2")]
+position = Vector2(256, 256)
+
+[node name="GameSpawner" parent="." instance=ExtResource("4_q2dpj")]
+
+[node name="CollectorsContainer" type="Node2D" parent="."]
